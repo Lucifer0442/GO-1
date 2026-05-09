@@ -6,8 +6,7 @@ import "net/http" // "net/http" is a package that provides HTTP client and serve
 func main (){ // is the engine of the program
 	
 	http.HandleFunc("/",func(w http.ResponseWriter, r *http.Request){
-		fmt.Fprint(w, "Hello World!")
+		message:=("Hello World!")
+		fmt.Fprint(message)
 	})
-
-	http.ListenAndServe(":8080",nil)
 }
